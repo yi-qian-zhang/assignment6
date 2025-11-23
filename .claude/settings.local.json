@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(conda run:*)",
+      "Bash(python calculate_hmm_params_v2.py:*)",
+      "Bash(iconv:*)",
+      "Bash(output.txt)",
+      "Bash(python manual_calc.py:*)",
+      "Bash(python:*)",
+      "Bash(printf:*)",
+      "Bash(timeout 30 python:*)",
+      "Bash(echo:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

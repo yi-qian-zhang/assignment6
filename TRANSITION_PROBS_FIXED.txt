@@ -1,0 +1,40 @@
+TRANSITION PROBABILITIES CORRECTED
+==================================
+
+Part 1a and Part 2a have been updated with the correct initial assignment transition probabilities.
+
+ALLIGATOR:
+-----------
+A1->A1: 0.236 → 0.812
+A1->A2: 0.764 → 0.188
+A2->A2: 0.338 → 0.812
+A2->A3: 0.662 → 0.188
+A3->A3: 0.213 → 0.727
+A3->Aend: 0.787 → 0.273
+
+NUTS:
+------
+N1->N1: 0.632 → 0.824
+N1->N2: 0.368 → 0.176
+N2->N2: 0.287 → 0.824
+N2->N3: 0.713 → 0.176
+N3->N3: 0.214 → 0.786
+N3->Nend: 0.786 → 0.214
+
+SLEEP:
+-------
+S1->S1: 0.129 → 0.75
+S1->S2: 0.871 → 0.25
+S2->S2: 0.123 → 0.75
+S2->S3: 0.877 → 0.25
+S3->S3: 0.287 → 0.667
+S3->Send: 0.713 → 0.333
+
+These values are calculated from initial state assignments without over-training.
+Formula: P(self) = 1 - (num_sequences / total_observations_in_state)
+
+Files updated:
+- notebook.ipynb (Cell 4: part_1_a, Cell 9: part_2_a)
+- submission/submission.py (regenerated)
+
+Ready for Gradescope submission!

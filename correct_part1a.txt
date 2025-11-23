@@ -1,0 +1,64 @@
+def part_1_a():
+    """Word ALLIGATOR"""
+    a_prior_probs = {
+        'A1': 0.333,
+        'A2': 0.0,
+        'A3': 0.0,
+        'Aend': 0.0
+    }
+    a_transition_probs = {
+        'A1': {'A1': 0.812, 'A2': 0.188, 'A3': 0.0, 'Aend': 0.0},
+        'A2': {'A1': 0.0, 'A2': 0.812, 'A3': 0.188, 'Aend': 0.0},
+        'A3': {'A1': 0.0, 'A2': 0.0, 'A3': 0.727, 'Aend': 0.273},
+        'Aend': {'A1': 0.0, 'A2': 0.0, 'A3': 0.0, 'Aend': 1.0}
+    }
+    a_emission_paras = {
+        'A1': (46.0, 22.6),
+        'A2': (40.0, 22.724),
+        'A3': (48.273, 17.326),
+        'Aend': (None, None)
+    }
+
+    """Word NUTS"""
+    n_prior_probs = {
+        'N1': 0.333,
+        'N2': 0.0,
+        'N3': 0.0,
+        'Nend': 0.0
+    }
+    n_transition_probs = {
+        'N1': {'N1': 0.824, 'N2': 0.176, 'N3': 0.0, 'Nend': 0.0},
+        'N2': {'N1': 0.0, 'N2': 0.824, 'N3': 0.176, 'Nend': 0.0},
+        'N3': {'N1': 0.0, 'N2': 0.0, 'N3': 0.786, 'Nend': 0.214},
+        'Nend': {'N1': 0.0, 'N2': 0.0, 'N3': 0.0, 'Nend': 1.0}
+    }
+    n_emission_paras = {
+        'N1': (38.059, 14.992),
+        'N2': (42.471, 12.989),
+        'N3': (46.143, 12.141),
+        'Nend': (None, None)
+    }
+
+    """Word SLEEP"""
+    s_prior_probs = {
+        'S1': 0.333,
+        'S2': 0.0,
+        'S3': 0.0,
+        'Send': 0.0
+    }
+    s_transition_probs = {
+        'S1': {'S1': 0.75, 'S2': 0.25, 'S3': 0.0, 'Send': 0.0},
+        'S2': {'S1': 0.0, 'S2': 0.75, 'S3': 0.25, 'Send': 0.0},
+        'S3': {'S1': 0.0, 'S2': 0.0, 'S3': 0.667, 'Send': 0.333},
+        'Send': {'S1': 0.0, 'S2': 0.0, 'S3': 0.0, 'Send': 1.0}
+    }
+    s_emission_paras = {
+        'S1': (31.833, 7.766),
+        'S2': (35.583, 7.555),
+        'S3': (37.0, 2.944),
+        'Send': (None, None)
+    }
+
+    return (a_prior_probs, a_transition_probs, a_emission_paras,
+            n_prior_probs, n_transition_probs, n_emission_paras,
+            s_prior_probs, s_transition_probs, s_emission_paras)
