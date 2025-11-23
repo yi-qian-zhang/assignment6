@@ -52,9 +52,9 @@ def part_1_a():
     """
 
     """Word ALLIGATOR"""
-    # Each word starts in state 1
+    # Prior probability for each word is 1/3
     a_prior_probs = {
-        'A1': 1.0,
+        'A1': 0.333,
         'A2': 0.0,
         'A3': 0.0,
         'Aend': 0.0
@@ -75,7 +75,7 @@ def part_1_a():
 
     """Word NUTS"""
     n_prior_probs = {
-        'N1': 1.0,
+        'N1': 0.333,
         'N2': 0.0,
         'N3': 0.0,
         'Nend': 0.0
@@ -97,7 +97,7 @@ def part_1_a():
 
     """Word SLEEP"""
     s_prior_probs = {
-        'S1': 1.0,
+        'S1': 0.333,
         'S2': 0.0,
         'S3': 0.0,
         'Send': 0.0
